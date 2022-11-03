@@ -122,32 +122,9 @@
 //     </style>
 //     </head>
 // <body class="">
-//     <form class="m-auto  mt-5 mb-5 pb-1 pt-1">
-//       <div class="container  h-100 mt-2">
-//         <div class="container-sm w-50">
-//           <h3 class="text-center mt-3">ANTI-PHISHING</h3><hr>
-//           <h4 class="text-center ">LOGIN</h4>
-//           <h6>on the next page your public username will inputed automatically,please check if it is correct</h6>
-//         </div>
-//         <div class="mb-3 w-100 m-auto">
-//           <label for="exampleInputName m-auto" class="form-label"> private Username</label>
-//           <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter Your Private username">
-//         </div>
-//         <div class="mb-3 w-100 m-auto">
-//           <label for="exampleInputName m-auto" class="form-label">Captch</label><br>
-//           <div class="w-50  m-auto">
-//           <img src="#" class="w-100 h-25 m-auto" alt="captch">
-//           <input type="text" class="form-control " id="exampleInputName" aria-describedby="emailHelp">
-//           </div>
-//         </div>
-//           <div class=" mx-auto w-100 text-center mt-5 mb-5">
-//           <a href="#" class="link">Lost/Forgot password</a>  <span>Password Reset</span><br>       
-//             <!-- <input classs="btn btn-primary w-25 mt-3" type="submit" value="Submit"> -->
-//           <p class="mt-3">Don't have an account? <a href="#" class="link">signUp</a></p>
-//         </div>
-//         <hr>
-//       </form>
-//     </div>
+//
+//      
+//     <h1>hey buddy </h1>
 // </body>
 // </html>
 //     `
@@ -174,6 +151,8 @@
 //     res.sendFile(`${publicPath}/login2.html`)
 // })
 // app.listen(5000)
+
+
 
 
 
@@ -226,7 +205,6 @@
 //     }
    
 // }
-
 // app.use(reqFilter)
 
 // app.get('/',(req,res)=>{
@@ -255,9 +233,6 @@
 //     }
    
 // }
-
-// // app.use(reqFilter)
-
 // app.get('/',(req,res)=>{
 //     res.send('Welcome to Home Page')
 // })
@@ -293,29 +268,28 @@
 
 
 
-// const express = require('express');
-// const app = express();
-// const reqFilter = require("./middleware")
-// const route = express.Router()
+const express = require('express');
+const app = express();
+const reqFilter = require("./middleware")
+const route = express.Router()
 
-// route.use(reqFilter);
+route.use(reqFilter);
 
-// app.get('/',(req,res)=>{
-//     res.send('Welcome to Home Page')
-// })
-// app.get('/users',(req,res)=>{
-//     res.send('Welcome to user Page')
-// })
-// route.get('/about',(req,res)=>{
-//     res.send('Welcome to about Page')
-// })
-// route.get('/contact',(req,res)=>{
-//     res.send('Welcome to contact Page')
-// })
+app.get('/',(req,res)=>{
+    res.send('Welcome to Home Page')
+})
+app.get('/users',(req,res)=>{
+    res.send('Welcome to user Page')
+})
+route.get('/about',(req,res)=>{
+    res.send('Welcome to about Page')
+})
+route.get('/contact',(req,res)=>{
+    res.send('Welcome to contact Page')
+})
+app.use('/',route)
 
-// app.use('/',route)
-
-// app.listen(5000)
+app.listen(5000)
 
 
 
