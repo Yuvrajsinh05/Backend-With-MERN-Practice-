@@ -1,0 +1,90 @@
+body{
+  background-image: linear-gradient(45deg, #000000, #2d3436);
+  height: 135vh ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+hr{
+    color: white;
+}
+
+h1,h3,h4,h5{
+  color: white;
+}
+h6{
+    color:grey;
+    font-family: monospace;
+    font-size: 13px;
+}
+.h6{
+  color: gray;
+  font-size: 13px;
+ }
+
+form{
+    background-color: rgb(30 35 36);
+    width: 35vw;
+}
+
+label{
+    color: white;
+    font-family: monospace;
+}
+
+#but{
+    background-color: #101010;
+    border: none;
+}
+
+  input[type=password], select {
+    background-color:  white;
+    border: none;
+  }  
+  input[type=text], select {
+    background-color:  white;
+    border: none;
+  }    
+#but{
+    background-color:  #242a2c;
+    border: none;
+  }
+  
+#but:hover {
+    background-color: rgb(34, 30, 30);
+  }
+
+.link{
+  /* text-decoration: none; */
+  color: gray;
+  text-align: center;
+}
+span,p{
+  color: white;
+}
+@media only screen and (max-width: 1200px) {
+  form{
+    width: 60vw;
+  }
+}
+@media only screen and (max-width: 1000px) {
+ form{
+   width: 65vw;
+ }
+}
+@media only screen and (max-width: 900px) {
+ form{
+   width: 70vw;
+ }
+}
+@media only screen and (max-width: 800px) {
+ form{
+   width: 75vw;
+ }
+}
+@media only screen and (max-width: 500px) {
+ form{
+   width: 90vw;
+ }
+}
