@@ -1,15 +1,17 @@
+//   < Create Basic static  Server >
+
 // const http = require("http")
-// // const readline = require('readline').createInterfaceno
-
-
-// function dataControl(req,res)
+// function data(req,res)
 // {
 //     res.write("Hey their ! this is from server side  ! fuck you budddy ")
 //     res.sendfi
 //     res.end();
 // }
-// const server = http.createServer(dataControl)
+// const server = http.createServer(data)
 
+//   </Create Basic static  Server >
+
+// <> Display JSON data to Browser <>
 
 // const http = require("http")
 // const data = require("./data")
@@ -23,11 +25,16 @@
 // })
 
 
-// console.log(process.argv)
+// <> Display JSON data to Browser </>
 
-// const fs =require('fs')
+
+//  <>Adding file with via terminal <> 
+
+// console.log(process.argv)(This property returns an array containing the arguments passed to the process when run it in the command line. The first element is the process execution path and the second element is the path for the js file.)
+
+// const fs = require('fs')
 // const input = process.argv
-// if(input[2]=='add')
+// if(input[2]=='add')                  
 // {
 //   fs.writeFileSync(input[3],input[4])
 // }else if(input[2]='remove')
@@ -37,6 +44,13 @@
 // else{
 //   console.log("invalid input")
 // }
+// (in terminal just write => (for adding) node index add word.txt "hew brother how are doing?" , (for removing) node index remove word.txt)
+
+//  <>Adding file with via terminal </> 
+
+
+
+// create and read in directory
 
 // const fs = require('fs')
 // const path = require('path')
@@ -53,6 +67,8 @@
 
 // console.log(__dirname)
 
+
+// crud oprations
 
 // const fs = require("fs")
 // const path = require("path")
@@ -74,17 +90,22 @@
 
 // fs.unlinkSync(`${dirPath}/fuck.file`)
 
+
+// setTimeout
+
 // let a =10
 // let b =0
 // console.log("start exe .....")
 
 // setTimeout(()=>{
-//   // console.log("logic exe .....")
+//   console.log("logic exe .....")
 //   b=20
 // },2000)
 
 // console.log(a+b)
 
+
+// Promises
 
 // let a =10
 // let b =0
@@ -98,8 +119,10 @@
 //     b=data;
 //     console.log(a+b , "data after when wait is over")
 // })
-// console.log(a+b ,"Wait a while")
+// console.log(a+b ,"Wait a while.........")
 
+
+// execution of node code
 
 // console.log("stariging up")
 // setTimeout(()=>{
