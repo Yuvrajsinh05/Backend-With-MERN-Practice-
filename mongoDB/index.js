@@ -1,15 +1,18 @@
-// const {MongoClient} = require('mongodb') Or
-// const MongoClient = require('mongodb').MongoClient
-// const url = 'mongodb://localhost:27017'
-// const database ='zomato'
-// const client = new MongoClient(url)
+const dbConnect =require('./mongodb')
+// // console.warn(dbConnect())
+// dbConnect().then((res)=>{
+//    res.find({"menu_id":70}).toArray().then((data)=>{
+//      console.log(data)
+//    })
+// })
 
+const main =async()=>{
+    // console.log("main function called")
+    let data = await dbConnect
+    ;
+    data =await data.find().toArray()
+    console.log(data);
 
-// async function getData(){
-//     let result = await client.connect();
-//     let db = result.db(database)
-//     let collection = db.collection('menu')
-//     let response = await collection.find().toArray()
-//     console.log(response)
-// }
-// getData()
+}
+main()
+
