@@ -4,20 +4,21 @@
 // function data(req,res)
 // {
 //     res.write("Hey their ! this is from server side  ! fuck you budddy ")
-//     res.sendfi
 //     res.end();
 // }
-// const server = http.createServer(data)
+// const server = http.createServer(data).listen(5000)
 
 //   </Create Basic static  Server >
+
 
 // <> Display JSON data to Browser <>
 
 // const http = require("http")
 // const data = require("./data")
 // http.createServer((req,res)=>{
-//   res.writeHead(200,{'Content-Type':'application\json'});
+//   res.writeHead(200,{'Content-Type':'application \ JSON'});
 //   res.write(JSON.stringify(data));
+// //   res.write(data)
 //   console.log(JSON.stringify(data));
 //   res.end()
 // }).listen(8800,()=>{
@@ -44,10 +45,11 @@
 // else{
 //   console.log("invalid input")
 // }
-// (in terminal just write => (for adding) node index add word.txt "hew brother how are doing?" , (for removing) node index remove word.txt)
+// (in terminal just write => (for adding) node index nnoadd word.txt "hew brother how are doing?" , (for removing) node index remove word.txt)
 
 //  <>Adding file with via terminal </> 
 
+console.log(process.argv)
 
 
 // create and read in directory
@@ -55,7 +57,7 @@
 // const fs = require('fs')
 // const path = require('path')
 // const dirPath = path.join(__dirname , 'files')
-// console.warn(dirPath)
+// console.warn(dirPath,"path")
 // for(var i =0;i<50;i++){
 //   fs.writeFileSync(dirPath+"/hello"+i+".txt","what's going in")
 // }
@@ -101,7 +103,6 @@
 //   console.log("logic exe .....")
 //   b=20
 // },2000)
-
 // console.log(a+b)
 
 
