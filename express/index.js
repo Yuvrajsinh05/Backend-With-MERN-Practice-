@@ -1,9 +1,10 @@
 // const express = require('express')
 // const app=express();
-
+// const data = require('./data')
 // app.get('',(req,res)=>{
-//     console.log("data send by browser" ,req.query)
-//    res.send("hello , this is home page ")
+//     const gd= JSON.stringify(data)
+//     console.log(gd)
+//    res.send(gd )
 // })
 // app.get('/about',(req,res)=>{
 //    res.send("hello , this is about page ")
@@ -122,8 +123,8 @@
 //     </style>
 //     </head>
 // <body class="">
-//
-//      
+
+     
 //     <h1>hey buddy </h1>
 // </body>
 // </html>
@@ -158,12 +159,10 @@
 
 // const express = require('express')
 // const path = require('path')
-
 // const app = express();
 // const publicPath=path.join(__dirname,'login-1')
 
 // app.set('view engine','ejs');
-
 // app.use(express.static(publicPath))
 // app.get('',(_,res)=>{
 
@@ -173,7 +172,7 @@
 //     const user ={
 //         name:"uv Banna",
 //         email:"uv@test",
-//         city:"ahemdabad",
+//          city:"ahemdabad",
 //         skills:["javascript","nodeJs","reactJS","expressJS"]
 //     }
 //     res.render('profile' ,{user})
@@ -268,28 +267,28 @@
 
 
 
-const express = require('express');
-const app = express();
-const reqFilter = require("./middleware")
-const route = express.Router()
+// const express = require('express');
+// const app = express();
+// const reqFilter = require("./middleware")
+// const route = express.Router()
 
-route.use(reqFilter);
+// route.use(reqFilter);
 
-app.get('/',(req,res)=>{
-    res.send('Welcome to Home Page')
-})
-app.get('/users',(req,res)=>{
-    res.send('Welcome to user Page')
-})
-route.get('/about',(req,res)=>{
-    res.send('Welcome to about Page')
-})
-route.get('/contact',(req,res)=>{
-    res.send('Welcome to contact Page')
-})
-app.use('/',route)
+// app.get('/',(req,res)=>{
+//     res.send('Welcome to Home Page')
+// })
+// app.get('/users',(req,res)=>{
+//     res.send('Welcome to user Page')
+// })
+// route.get('/about',(req,res)=>{
+//     res.send('Welcome to about Page')
+// })
+// route.get('/contact',(req,res)=>{
+//     res.send('Welcome to contact Page')
+// })
+// app.use('/',route)
 
-app.listen(5000)
+// app.listen(5000)
 
 
 
