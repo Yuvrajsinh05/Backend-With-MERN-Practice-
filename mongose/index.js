@@ -1,72 +1,29 @@
-// const mongoose = require('mongoose');
+const express = require('express')
+require('./config')
 
-// const main=async()=>{
-//     await mongoose.connect("mongodb://localhost:27017/zomato")
-//     const ProductSchema = new mongoose.Schema({
-//         name:String,
-//         price:Number,
-//         brand:String,
-//         Category:String
-//     });
-//     const ProductsModal =mongoose.model('locations')
-//     let data = new ProductsModal({name:'heroku' , price:1000 ,brand:"maxx", Category:"Mobile"})
-//     let result =await data.save();
-//     console.log(result)
-// }
+const Product = require('./products')
 
-
-const mongoose = require('mongoose');
-
-mongoose.connect("mongodb://localhost:27017/zomato")
-
-const ProductSchema = new mongoose.Schema({
-    name:String,
-    price:Number,
-    brand:String,
-    Category:String
-});
-
-// const main=async()=>{
-//     const ProductsModal =mongoose.model('locations',ProductSchema)
-//     let data = new ProductsModal({name:'heroku' , price:1000 ,brand:"maxx", Category:"Mobile"})
-//     let result =await data.save();
-//     console.log(result)
-// }
-// main()
-
-
-// const saveInB=async()=>{
-//     const Product =mongoose.model('locations',ProductSchema)
-//     let data = new Product({name:'heroku' , price:1000 ,brand:"maxx", Category:"Mobile"})
-//     let result =await data.save();
-//     console.log(result)
-// }
-// const updateInDB=async()=>{
-//     const Product = mongoose.model('locations',ProductSchema)
-//     const data= await Product.updateOne(
-//         {name:"max"},{
-//             $set:{price : 700}
-//         }
-//     )
-//     console.log(data)
-// }
-// updateInDB()
-
-// const deleteInDB = async()=>{
-//     const Product = mongoose.model('locations',ProductSchema)
-//     let data = await Product.deleteOne({
-//         name:'max 8'
-// })
-// console.log(data)
-// }
-
-// deleteInDB()
-const findInDB = async()=>{
-    const Product = mongoose.model('locations',ProductSchema)
-    let data = await Product.find({
-        name:'max 8'
+const app = express()
+app.use(express.json())
+app.post('/create', async (req, res) => {
+    let data = new Product(req.body)
+    let result = await data.save()
+    console.log(req.body)
+    res.send(result);
 })
-console.log(data)
-}
-
-findInDB()
+app.get('/list', async (req, res) => {
+    let data = await Product.find()
+    res.send(data)
+})
+app.delete('/delete/:_id', async (req, res) => {
+    console.log(req.params)
+    let data = await Product.deleteOne(req.params)
+    res.send(data)
+})
+app.put('/update/:_id', async (req, res) => {
+    console.log(req.params)
+    let data = await Product.updateOne(req.params,
+        { $set: req.body })
+    res.send(data)
+})
+app.listen(5000)
