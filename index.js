@@ -49,7 +49,7 @@
 
 //  <>Adding file with via terminal </> 
 
-console.log(process.argv)
+// console.log(process.argv)
 
 
 // create and read in directory
