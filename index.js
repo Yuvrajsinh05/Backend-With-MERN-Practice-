@@ -133,3 +133,13 @@
 //    console.log("0 second log")   
 // },0)
 // console.log("finishing up")
+
+
+
+const os = require('os')
+// console.log(os.arch())
+// console.log(os.freemem()/(1024*1024*1024))
+// os.hostname
+// os.totalmem
+// os.platform
+// os.userInfo
