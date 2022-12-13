@@ -34,7 +34,8 @@
 // console.log(process.argv)(This property returns an array containing the arguments passed to the process when run it in the command line. The first element is the process execution path and the second element is the path for the js file.)
 
 // const fs = require('fs')
-// const input = process.argv
+// let input = process
+// console.log(input.argv)
 // if(input[2]=='add')                  
 // {
 //   fs.writeFileSync(input[3],input[4])
@@ -77,7 +78,8 @@
 // const dirPath =path.join(__dirname,'crud');
 // const filepath = `${dirPath}/apple.text`
 
-// fs.writeFileSync(filepath,'This is a simple text file')
+// fs.writeFileSync(filepath,'This is a simple text file ok here we got updated')
+
 // fs.readFile(filepath,'utf-8',(err,item)=>{
 //   console.log(item)
 // })
@@ -116,6 +118,7 @@
 //         resolve(30)
 //       },2000)
 // })
+// // console.log(waitingData)
 // waitingData.then((data)=>{
 //     b=data;
 //     console.log(a+b , "data after when wait is over")
@@ -136,7 +139,7 @@
 
 
 
-// const os = require('os')
+const os = require('os')
 // console.log(os.arch())
 // console.log(os.freemem()/(1024*1024*1024))
 // os.hostname
