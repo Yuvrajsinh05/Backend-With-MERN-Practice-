@@ -112,17 +112,21 @@
 
 // let a =10
 // let b =0
+
 // console.log("start exe .....")
+
 // let waitingData = new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
 //         resolve(30)
 //       },2000)
 // })
-// // console.log(waitingData)
+// console.log(waitingData)
+
 // waitingData.then((data)=>{
 //     b=data;
 //     console.log(a+b , "data after when wait is over")
 // })
+
 // console.log(a+b ,"Wait a while.........")
 
 
