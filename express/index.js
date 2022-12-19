@@ -1,5 +1,5 @@
 // const express = require('express')
-// const app=express();
+// const app = express();
 // const data = require('./data')
 // app.get('',(req,res)=>{
 //     const gd= JSON.stringify(data)
@@ -38,87 +38,11 @@
 //   background-size: cover;
 //   position: relative;
 // }
-// hr{
-//     color: white;
-// }
+
 
 // h1,h3,h4,h5{
-//   color: white;
+//   color: red;
 // }
-// h6{
-//     color:grey;
-//     font-family: monospace;
-//     font-size: 13px;
-// }
-// .h6{
-//   color: gray;
-//   font-size: 13px;
-//  }
-
-// form{
-//     background-color: rgb(30 35 36);
-//     width: 35vw;
-// }
-
-// label{
-//     color: white;
-//     font-family: monospace;
-// }
-
-// #but{
-//     background-color: #101010;
-//     border: none;
-// }
-
-//   input[type=password], select {
-//     background-color:  white;
-//     border: none;
-//   }  
-//   input[type=text], select {
-//     background-color:  white;
-//     border: none;
-//   }    
-// #but{
-//     background-color:  #242a2c;
-//     border: none;
-//   }
-  
-// #but:hover {
-//     background-color: rgb(34, 30, 30);
-//   }
-
-// .link{
-//   /* text-decoration: none; */
-//   color: gray;
-//   text-align: center;
-// }
-// span,p{
-//   color: white;
-// }
-// @media only screen and (max-width: 1200px) {
-//   form{
-//     width: 60vw;
-//   }
-// }
-// @media only screen and (max-width: 1000px) {
-//  form{
-//    width: 65vw;
-//  }
-// }
-// @media only screen and (max-width: 900px) {
-//  form{
-//    width: 70vw;
-//  }
-// }
-// @media only screen and (max-width: 800px) {
-//  form{
-//    width: 75vw;
-//  }
-// }
-// @media only screen and (max-width: 500px) {
-//  form{
-//    width: 90vw;
-//  }
 // }
 //     </style>
 //     </head>
@@ -134,17 +58,15 @@
 // app.get('/about',(req,res)=>{
 //    res.send("hello , this is about page ")
 // })
-
 // app.listen(5000)
 
 
 // const express = require('express')
 // const path = require('path')
-
 // const app = express();
 // const publicPath=path.join(__dirname,'login-1')
 
-// // app.use(express.static(publicPath))
+// app.use(express.static(publicPath))
 // app.get('',(_,res)=>{
 //     res.sendFile(`${publicPath}/login1.html`)
 // })
@@ -157,15 +79,15 @@
 
 
 
-//  const express = require('express')
+// const express = require('express')
 // const path = require('path')
 // const app = express();
 // const publicPath=path.join(__dirname,'login-1')
 
 // app.set('view engine','ejs');
 // app.use(express.static(publicPath))
-// app.get('',(_,res)=>{
 
+// app.get('',(_,res)=>{
 //     res.sendFile(`${publicPath}/login1.html` )
 // })
 // app.get('/profile',(_,res)=>{
